@@ -1,9 +1,13 @@
-import './App.css'
+import TopHeader from "./components/TopHeader.jsx";
+import ProductsSection from "./components/ProductsSection.jsx";
 
 function App() {
 
   return (
-    <div className="App"></div>
+    <div className="">
+      <TopHeader />
+      <ProductsSection />
+    </div>
   )
 }
 
