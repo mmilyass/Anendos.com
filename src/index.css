@@ -1,19 +1,59 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
-/* Apply chosen fonts app-wide */
-html, body, #root, * {
-  font-family: "Cinzel", "Libre Baskerville", serif;
-}
-
-/* If you're using Tailwind, consider moving this into a base layer:
-@layer base {
-  html, body, #root {
-    font-family: "Bodoni Moda", "Libre Baskerville", serif;
-  }
-}
-*/
-
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400..900&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html,
+body,
+#root,
+* {
+  font-family: "Libre Baskerville", serif;
+}
 
+:root{
+  --main-gold: #FFE100;
+}
+
+.qanswer{
+  display: grid;
+  grid-template-columns: 1fr; /* default 1 column */
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+}
+.topSales {
+  display: grid;
+  grid-template-columns: 1fr; /* default 1 column */
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* Small screens (≥640px) */
+@media (min-width: 640px) {
+  .topSales {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large screens (≥1024px) */
+@media (min-width: 1024px) {
+  .topSales {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Extra-large screens (≥1280px) */
+@media (min-width: 1280px) {
+  .topSales {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Extra-large screens (≥1280px) */
+@media (min-width: 1536px) {
+  .qanswer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
