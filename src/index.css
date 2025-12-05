@@ -13,22 +13,17 @@ body,
   --main-gold: #FFE100;
 }
 
-.qanswer{
-  display: grid;
-  grid-template-columns: 1fr; /* default 1 column */
-  justify-items: center;
-  align-items: center;
-  gap: 2rem;
+.bilargy{
+  font-family: "bilargy", serif;
+  letter-spacing: 0.2rem;
 }
-.topSales {
-  display: grid;
-  grid-template-columns: 1fr; /* default 1 column */
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  gap: 2rem;
-  align-items: stretch;
+
+body{
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin: 0;
 }
+
 
 /* Small screens (≥640px) */
 @media (min-width: 640px) {
@@ -56,4 +51,13 @@ body,
   .qanswer {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.custom-scroll-text {
+  display: flex;
+  justify-content: center;
+  color: var(--main-gold);  /* gold text */
+  font-size: 6rem;
+  font-family: 'bilargy', serif;
+  font-weight: bold;
 }
