@@ -1,6 +1,7 @@
 // "use client";
 import { useState } from "react";
 import ChevronDown from "../assets/chevrondown.png";
+import "../index.css"
 
 const DEFAULT_ITEMS = [
   {
@@ -42,34 +43,31 @@ export default function CustomAccordion({ index }) {
   return (
     <div
       key={index}
-      className={`bg-white dark:bg-neutral-800 rounded-[1rem] border transition-all duration-200 overflow-hidden w-[100%]
-        ${isOpen ? "bg-[(var(--main-gold)),1)] " : ""}`}
+      className={`bg-white dark:bg-neutral-800 rounded-[1rem] border transition-all duration-200 overflow-hidden w-[50rem]`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`text-[white] border-0 w-full h-[6rem] rounded-t-[1rem] font-bold hover:text-[var(--main-gold)] bg-[rgba(240,240,240,0.15)] transition-colors duration-200 flex justify-between items-center px-[5rem]       }`}
+        className={`text-[white] border-0 w-full h-[6rem] rounded-t-[1rem] font-bold hover:text-[var(--main-gold)] bg-[rgba(240,240,240,0.15)] transition-colors duration-200 flex justify-between items-center px-[5rem]  
+                  ${isOpen ? "bg-[rgba(255,255,0,0.1)] " : ""} }`}
       >
         <span
-          className={`text-base sm:text-lg leading-snug pr-4 text-[1.4rem] text-bold ${
-            isOpen ? "text-[var(--main-gold)]" : ""
-          }`}
+          className={`text-base sm:text-lg leading-snug pr-4 text-[1.4rem] text-bold ${isOpen ? "text-[var(--main-gold)]" : ""
+            }`}
         >
           {DEFAULT_ITEMS[index].question}
         </span>
         <img
           src={ChevronDown}
-          className={`h-[1rem] w-[1rem] transition-transform duration-200 flex-shrink-0 ${
-            isOpen ? "transform rotate-180" : ""
-          }`}
+          className={`h-[1rem] w-[1rem] transition-transform duration-200 flex-shrink-0 ${isOpen ? "transform rotate-180" : ""
+            }`}
         />
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out${
-          isOpen
-            ? "opacity-100 bg-[rgba(240,240,240,0.15)] px-[5rem] pb-[2rem]"
-            : "h-0 opacity-0 hidden"
-        }`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out${isOpen
+          ? "opacity-100 bg-[rgba(240,240,240,0.15)] px-[5rem] pb-[2rem]"
+          : "h-0 opacity-0 hidden"
+          }`}
       >
         <div className="px-6 pb-6 pt-2 opacity-55 leading-relaxed">
           <div className="text-sm sm:text-base text-[white] leading-[2]">

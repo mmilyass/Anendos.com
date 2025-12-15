@@ -8,12 +8,12 @@ import "../fonts/fonts.css";
 
 export default function HomePage() {
   return (
-    <section data-aos="fade-up" id="home" className="flex flex-col w-full">
-      <div className="flex items-center mt-[8rem] gap-[6rem] w-full relative">
+    <section data-aos="fade-up" id="home" className="flex flex-col w-full px-[8rem]">
+      <div className="flex items-center  gap-[3rem] w-full relative mt-[10rem]">
         <div className="flex flex-col items-left w-[60%] pt-[5rem]">
-          <h1 className="text-[white] text-[5rem] bilargy">
-            <span className="text-[var(--main-gold)] bilargy">Luxury</span>,{" "}
-            <span className="text-[var(--main-gold)] bilargy">Confidence</span>
+          <h1 className="text-[white] text-[5rem]">
+            <span className="text-[var(--main-gold)]">Luxury</span>,{" "}
+            <span className="text-[var(--main-gold)]">Confidence</span>
             <br></br> Every Note Resonates.
           </h1>
           <div>
@@ -24,7 +24,7 @@ export default function HomePage() {
               <br /> and confident feeling—without the expensive price tag
             </p>
           </div>
-          <button className="text-[1rem] py-[5px] px-[10px] rounded-[1rem] w-[13rem] border-0 bg-[white] hover:bg-[var(--main-gold)] hover:text-[white] transition-all duration-500 mt-[-1rem]">
+          <button className="text-[1rem] py-[5px] px-[10px] rounded-[1rem] w-[13rem] border-0 bg-[white] hover:bg-[var(--main-gold)]  transition-all duration-500 mt-[-1rem]">
             Discover Top Sales
           </button>
         </div>

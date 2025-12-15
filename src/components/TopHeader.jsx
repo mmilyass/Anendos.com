@@ -5,8 +5,7 @@ import NavComponent from "./navComponent";
 export default function TopHeader() {
   return (
     <header
-      // style={{ backgroundImage: `url(${background})` }}
-      className="h-[66rem] bg-cover bg-center w-full flex flex-col items-cente"
+      className="h-[66rem] bg-cover bg-center w-full flex flex-col items-cente px-[6rem]"
     >
       <NavComponent />
       <HomePage />
