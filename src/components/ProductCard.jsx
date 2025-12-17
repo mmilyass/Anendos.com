@@ -1,22 +1,14 @@
-import React from "react";
-
 export default function ProductCard({ image, name, price, oldPrice, size }) {
   let width, imgSize;
-  size === "small" ? (width = "16rem", imgSize = "6rem") : (width = "20rem", imgSize = "8rem");
+  size === "small" ? (width = "16rem", imgSize = "10rem") : (width = "20rem", imgSize = "13rem");
 
   return (
     <div
-      className="rounded-md bg-[#0b0b0b] overflow-hidden shadow-[0_0_20px_rgba(255,215,0,0.2)] border border-[#262626] flex flex-col items-center justify-center"
+      className="rounded-md overflow-hidden  flex flex-col items-center justify-center bg-gradient-to-b from-black to-[rgba(77,78,0,0.5)]"
       style={{ width }}
     >
-      <div className="w-full flex justify-center">
-        <span className="absolute bg-[#2a2a2a] text-[0.8rem] text-[#d1d1d1] px-[0.6rem] py-[0.2rem] rounded-[0.4rem] m-4">
-          40% OFF
-        </span>
-      </div>
-
       {/* Product Image */}
-      <div className="pt-16">
+      <div className="pt-16 hover:scale-105 transition duration-600 drop-shadow-2xl">
         <img src={image} alt="" style={{ width: imgSize }} />
       </div>
 

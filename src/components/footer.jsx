@@ -1,6 +1,3 @@
-import { div } from "motion/react-client";
-import React from "react";
-
 export default function Footer({
   logo,
   email,
@@ -10,8 +7,8 @@ export default function Footer({
   facebookUrl,
   instagramIcon,
   instagramUrl,
-  twitterIcon,
-  twitterUrl,
+  // twitterIcon,
+  // twitterUrl,
 }) {
   return (
     <div className="w-full">

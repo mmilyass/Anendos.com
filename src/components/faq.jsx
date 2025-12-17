@@ -1,6 +1,5 @@
 // "use client";
 import { useState } from "react";
-import ChevronDown from "../assets/chevrondown.png";
 import "../index.css"
 
 const DEFAULT_ITEMS = [
@@ -57,7 +56,7 @@ export default function CustomAccordion({ index }) {
           {DEFAULT_ITEMS[index].question}
         </span>
         <img
-          src={ChevronDown}
+          src={"../../public/assets/chevrondown.png"}
           className={`h-[1rem] w-[1rem] transition-transform duration-200 flex-shrink-0 ${isOpen ? "transform rotate-180" : ""
             }`}
         />

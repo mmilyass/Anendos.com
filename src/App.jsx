@@ -9,9 +9,7 @@ import Footer from "./components/footer.jsx";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Collection from "./components/collection.jsx";
-import logo from "./assets/logo.png";
 import ProductDetail from "./components/ProductDetail.jsx"; // Example new page
-import { div } from "motion/react-client";
 
 function App() {
   useEffect(() => {
@@ -27,14 +25,14 @@ function App() {
           path="/"
           element={
             <div className="flex flex-col gap-48">
-              <div className="flex flex-col items-center justify-center bg-black gap-48 mx-32">
+              <div className="flex flex-col items-center justify-center bg-black gap-48 mx-46">
                 <TopHeader />
                 <ProductsSection />
                 <Collection />
                 <Answers />
               </div>
               <Footer
-                logo={logo}
+                logo="../../public/assets/logo.png"
                 email="anendos@gmail.com"
                 mobile="0604505235"
                 instagramIcon="src/assets/facebookIcon.png"

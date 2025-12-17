@@ -6,24 +6,24 @@
     "price": 199,
     "oldPrice": 399,
     "size": "50ml",
-    "image": "../assets/bottle.png",
+    "image": "public/assets/bottle.png",
     "description": "Experience the epitome of luxury with Clive Christian, a fragrance that captivates the senses with its rich and opulent blend. Perfect for those who appreciate the finer things in life.",
-    "detailImage": "../assets/detailImage.webp",
+    "detailImage": "../../public/assets/detailImage.webp",
     "relatedProducts": [
       {
         "name": "something",
         "price": 99,
-        "image": "../assets/bottle.png"
+        "image": "public/assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
-        "image": "../assets/bottle.png"
+        "image": "public/assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
-        "image": "../assets/bottle.png"
+        "image": "public/assets/bottle.png"
       }
     ],
     "extraInfo": [
@@ -48,24 +48,24 @@
     "price": 199,
     "oldPrice": 399,
     "size": "50ml",
-    "image": "../assets/bottle.png",
+    "image": "public/assets/bottle.png",
     "description": "A dark and mysterious fragrance with an air of elegance.",
-    "detailImage": "../assets/detailImage.webp",
+    "detailImage": "../../public/assets/detailImage.webp",
     "SeeMore": [
       {
         "name": "something else",
         "price": 109,
-        "image": "../assets/bottle.png"
+        "image": "public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
-        "image": "../assets/bottle.png"
+        "image": "public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
-        "image": "../assets/bottle.png"
+        "image": "public/assets/bottle.png"
       }
     ],
     "extraInfo": [
@@ -90,13 +90,13 @@
     "price": 299,
     "oldPrice": 499,
     "size": "100ml",
-    "image": "../assets/bottle.png",
+    "image": "public/assets/bottle.png",
     "description": "A bold and powerful fragrance for confident men.",
-    "detailImage": "../assets/detailImage.webp",
+    "detailImage": "../../public/assets/detailImage.webp",
     "SeeMore": {
       "name": "special edition",
       "price": 199,
-      "image": "../assets/bottle.png"
+      "image": "public/assets/bottle.png"
     },
     "extraInfo": [
       {
@@ -120,13 +120,13 @@
     "price": 279,
     "oldPrice": 450,
     "size": "100ml",
-    "image": "../assets/bottle.png",
+    "image": "public/assets/bottle.png",
     "description": "A timeless and elegant fragrance.",
-    "detailImage": "../assets/detailImage.webp",
+    "detailImage": "../../public/assets/detailImage.webp",
     "SeeMore": {
       "name": "limited edition",
       "price": 199,
-      "image": "../assets/bottle.png"
+      "image": "public/assets/bottle.png"
     },
     "extraInfo": [
       {

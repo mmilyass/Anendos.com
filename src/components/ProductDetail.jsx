@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Plus, Minus } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import perfumes from "../data/topsales.json";
 import "../index.css";
 
 export default function ProductDetail() {
+  const navigate = useNavigate();
   const { state } = useLocation();
+  const [quantity, setQuantity] = useState(1);
+  const [expandedSection, setExpandedSection] = useState(null);
   if (!state) {
     return <div className="text-white w-30 h-30">No perfum information available.</div>;
   }
-  const [quantity, setQuantity] = useState(1);
-  const [expandedSection, setExpandedSection] = useState(null);
   const perfum = perfumes[state.name];
   console.log(perfum);
   const toggleSection = (index) => {
@@ -22,7 +24,7 @@ export default function ProductDetail() {
       {/* Header */}
       <div className="border-b border-gray-200">
         <div className="mx-auto px-6 lg:px-32 py-6">
-          <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-white transition">
+          <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-sm text-gray-600 hover:text-white transition">
             <ArrowLeft size={20} />
             Back
           </button>
