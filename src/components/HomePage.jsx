@@ -2,7 +2,7 @@ import React from "react";
 import "../index.css"; // add: global font import
 // import background from "../assets/background.png";
 import bottle from "../assets/bottle.png";
-import smoke2 from "../assets/smoke2.png";
+// import smoke2 from "../assets/smoke2.png";
 import "../fonts/fonts.css";
 
 
