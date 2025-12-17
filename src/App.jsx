@@ -11,7 +11,7 @@ import { useEffect } from "react";
 import Collection from "./components/collection.jsx";
 import logo from "./assets/logo.png";
 import ProductDetail from "./components/ProductDetail.jsx"; // Example new page
-import ProductInfo from "./components/ProductsSection.jsx"
+import { div } from "motion/react-client";
 
 function App() {
   useEffect(() => {
@@ -26,11 +26,13 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="flex flex-col items-center justify-center bg-[#000] gap-[12rem]">
-              <TopHeader />
-              <ProductsSection />
-              <Collection />
-              <Answers />
+            <div className="flex flex-col gap-48">
+              <div className="flex flex-col items-center justify-center bg-black gap-48 mx-32">
+                <TopHeader />
+                <ProductsSection />
+                <Collection />
+                <Answers />
+              </div>
               <Footer
                 logo={logo}
                 email="anendos@gmail.com"
@@ -41,7 +43,7 @@ function App() {
             </div>
           }
         />
-        <Route path="/ProductDetail" element={<ProductDetail ProductInfo />} />
+        <Route path="/ProductDetail" element={<ProductDetail />} />
       </Routes>
     </Router>
   );

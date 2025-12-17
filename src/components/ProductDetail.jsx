@@ -1,95 +1,151 @@
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { Star, Truck, ShieldCheck, ArrowLeft } from "lucide-react";
+import React, { useState } from "react";
+import { ArrowLeft, Plus, Minus } from "lucide-react";
+import { useLocation } from "react-router-dom";
+import perfumes from "../data/topsales.json";
+import "../index.css";
 
 export default function ProductDetail() {
-  const navigate = useNavigate();
   const { state } = useLocation();
-
   if (!state) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-gray-600">
-        Product not found
-      </div>
-    );
+    return <div className="text-white w-30 h-30">No perfum information available.</div>;
   }
-
-  const { image, name, price, oldPrice, description } = state;
+  const [quantity, setQuantity] = useState(1);
+  const [expandedSection, setExpandedSection] = useState(null);
+  const perfum = perfumes[state.name];
+  console.log(perfum);
+  const toggleSection = (index) => {
+    setExpandedSection(expandedSection === index ? null : index);
+  };
 
   return (
-    <section className="min-h-screen bg-white text-black px-6 lg:px-20 py-12">
-      {/* BACK */}
-      <button
-        onClick={() => navigate(-1)}
-        className="flex items-center gap-2 text-sm text-gray-600 hover:text-black mb-6"
-      >
-        <ArrowLeft size={16} /> Back
-      </button>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
-        {/* IMAGE */}
-        <div className="flex justify-center items-center bg-gray-50 rounded-2xl p-10 shadow-sm">
-          <img
-            src={image}
-            alt={name}
-            className="w-[320px] lg:w-[420px] object-contain"
-          />
-        </div>
-
-        {/* DETAILS */}
-        <div className="flex flex-col gap-6">
-          <div>
-            <h1 className="text-4xl font-semibold tracking-tight">{name}</h1>
-            <div className="flex items-center gap-2 mt-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={18} className="fill-black" />
-              ))}
-              <span className="text-sm text-gray-500">(128 reviews)</span>
-            </div>
-          </div>
-
-          {/* PRICE */}
-          <div className="flex items-end gap-4">
-            <span className="text-3xl font-bold">{price} MAD</span>
-            {oldPrice && (
-              <span className="text-lg line-through text-gray-400">{oldPrice} MAD</span>
-            )}
-          </div>
-
-          {/* DESCRIPTION */}
-          <p className="text-gray-700 leading-relaxed max-w-xl">
-            {description}
-          </p>
-
-          {/* BENEFITS */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              <Truck size={18} /> Fast Delivery
-            </div>
-            <div className="flex items-center gap-2">
-              <ShieldCheck size={18} /> Authentic Product
-            </div>
-            <div className="flex items-center gap-2">
-              <Star size={18} /> Premium Quality
-            </div>
-          </div>
-
-          {/* ACTIONS */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <button className="flex-1 bg-black text-white py-4 rounded-xl text-sm font-medium hover:bg-gray-900 transition">
-              Buy Now
-            </button>
-            <button className="flex-1 border border-black py-4 rounded-xl text-sm font-medium hover:bg-gray-100 transition">
-              Order via WhatsApp (COD)
-            </button>
-          </div>
-
-          {/* TRUST */}
-          <p className="text-xs text-gray-500 mt-4">
-            100% secure payment · Free returns within 7 days
-          </p>
+    <div className="min-h-screen bg-black">
+      {/* Header */}
+      <div className="border-b border-gray-200">
+        <div className="mx-auto px-6 lg:px-32 py-6">
+          <button className="flex items-center gap-2 text-sm text-gray-600 hover:text-white transition">
+            <ArrowLeft size={20} />
+            Back
+          </button>
         </div>
       </div>
-    </section>
+
+      {/* Main Product Section */}
+      <div className="mx-auto px-6 lg:px-32 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left: Product Image */}
+          <div className="border-[rgba(255,255,0,0.2)] border flex items-center justify-center py-20">
+            <img
+              src={perfum.image}
+              alt={perfum.name}
+              className="w-auto h-125 object-contain"
+            />
+          </div>
+
+          {/* Right: Product Info */}
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-4xl font-light text-(--main-gold) mb-1">{perfum.name}</h1>
+              <p className="text-sm text-white">{perfum.subtitle}</p>
+            </div>
+
+            <div className="text-3xl font-light text-white">{perfum.price}MAD</div>
+
+            <p className="text-sm text-white leading-relaxed">
+              {perfum.description}
+            </p>
+
+            {/* Quantity & Add to Cart */}
+            <div className="space-y-4 pt-4">
+              <div className="flex items-center gap-4">
+                <label className="text-sm text-(--main-gold)">Quantity</label>
+                <div className="flex items-center border border-gray-300">
+                  <button
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                    className="px-4 py-2 hover:text-(--main-gold) transition text-white"
+                  >
+                    <Minus size={14} />
+                  </button>
+                  <span className="px-6 py-2 text-sm border-x border-gray-300 text-(--main-gold)">{quantity}</span>
+                  <button
+                    onClick={() => setQuantity(quantity + 1)}
+                    className="px-4 py-2 hover:text-(--main-gold) transition text-white"
+                  >
+                    <Plus size={14} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <button className="bg-white text-black py-4 text-sm font-light tracking-wide hover:bg-gray-800 hover:text-(--main-gold) transition">
+                  ADD TO CART
+                </button>
+                <button className="bg-white text-black py-4 text-sm font-light tracking-wide hover:bg-gray-800 hover:text-(--main-gold) transition">
+                  ADD TO WISHLIST
+                </button>
+              </div>
+            </div>
+
+            {/* Expandable Sections */}
+            <div className="pt-8">
+              {perfum.extraInfo.map((section, index) => (
+                <div key={index} className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleSection(index)}
+                    className="w-full flex items-center justify-between py-5 text-left transition"
+                  >
+                    <span className="text-sm font-light text-white tracking-wide uppercase">
+                      {section.title}
+                    </span>
+                    <Plus
+                      size={16}
+                      className={`text-(--main-gold) transition-transform ${expandedSection === index ? "rotate-45" : ""
+                        }`}
+                    />
+                  </button>
+                  {expandedSection === index && (
+                    <div className="pb-6 text-sm text-gray-600 leading-relaxed">
+                      {section.content}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Full Width Detail Image */}
+      <div className="w-full px-6 lg:px-32 bg-black">
+        <img
+          src={perfum.detailImage}
+          alt="Product detail"
+          className="w-full h-150 object-cover"
+        />
+      </div>
+
+      {/* Related Products */}
+      <div className="bg-black-50 py-20">
+        <div className="mx-auto px-6 lg:px-32">
+          <h2 className="text-2xl font-light text-(--main-gold) mb-12">See also</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {perfum.relatedProducts.map((item, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="border border-[rgba(255,255,0,0.2)] mb-4 flex justify-center items-center h-100">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="h-80 hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="flex items-start justify-between">
+                  <h3 className="text-sm font-light text-white">{item.name}</h3>
+                  <span className="text-sm font-light text-white">${item.price}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

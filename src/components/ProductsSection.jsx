@@ -9,6 +9,8 @@ import image from "../assets/bottle.png"
 export let ProductInfo;
 
 export default function ProductsSection() {
+  const names = ["La Coste Blanc", "La Coste Noir", "Creed Aventus", "Bleu de Chanel"];
+  const types = ["lacoste_blanc", "lacoste_noir", "creed_aventus", "bleu_de_chanel"];
   return (
     <section
       data-aos="fade-up"
@@ -24,47 +26,17 @@ export default function ProductsSection() {
       </div>
 
       <div className="flex justify-center w-full z-10">
-        <div className="flex flex-wrap justify-between w-full  px-[8rem]">
-          <Link to="ProductDetail"
-            state={{
-              image: image ,
-              name: "Clive Christian",
-              price: 199,
-              oldPrice: 400,
-              description: "Experience the epitome of luxury with Clive Christian, a fragrance that captivates the senses with its rich and opulent blend. Perfect for those who appreciate the finer things in life.",
-            }}>
-            <ProductCard image={perfumeImage} name={"Clive Christian"} price={199} oldPrice={400} size="large" />
-          </Link>
-          <Link to="ProductDetail"
-            state={{
-              image: image ,
-              name: "Clive Christian",
-              price: 199,
-              oldPrice: 400,
-              description: "Experience the epitome of luxury with Clive Christian, a fragrance that captivates the senses with its rich and opulent blend. Perfect for those who appreciate the finer things in life.",
-            }}>
-            <ProductCard image={perfumeImage} name={"Clive Christian"} price={199} oldPrice={400} size="large" />
-          </Link>
-          <Link to="ProductDetail"
-            state={{
-              image: image ,
-              name: "Clive Christian",
-              price: 199,
-              oldPrice: 400,
-              description: "Experience the epitome of luxury with Clive Christian, a fragrance that captivates the senses with its rich and opulent blend. Perfect for those who appreciate the finer things in life.",
-            }}>
-            <ProductCard image={perfumeImage} name={"Clive Christian"} price={199} oldPrice={400} size="large" />
-          </Link>
-          <Link to="ProductDetail"
-            state={{
-              image: image ,
-              name: "Clive Christian",
-              price: 199,
-              oldPrice: 400,
-              description: "Experience the epitome of luxury with Clive Christian, a fragrance that captivates the senses with its rich and opulent blend. Perfect for those who appreciate the finer things in life.",
-            }}>
-            <ProductCard image={perfumeImage} name={"Clive Christian"} price={199} oldPrice={400} size="large" />
-          </Link>
+        <div className="flex flex-wrap justify-between w-full">
+          {types.map((moveItem, index) => {
+            return (
+              <Link
+                to="ProductDetail"
+                state={{ name: moveItem }}
+                className="text-decoration-none no-underline">
+                <ProductCard image={perfumeImage} name={names[index]} price={99} oldPrice={199} size="large" />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

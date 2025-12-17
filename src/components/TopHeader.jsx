@@ -5,7 +5,7 @@ import NavComponent from "./navComponent";
 export default function TopHeader() {
   return (
     <header
-      className="h-[66rem] bg-cover bg-center w-full flex flex-col items-cente px-[6rem]"
+      className="h-[66rem] w-full flex flex-col items-cente"
     >
       <NavComponent />
       <HomePage />

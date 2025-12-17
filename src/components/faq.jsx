@@ -43,7 +43,7 @@ export default function CustomAccordion({ index }) {
   return (
     <div
       key={index}
-      className={`bg-white dark:bg-neutral-800 rounded-[1rem] border transition-all duration-200 overflow-hidden w-[50rem]`}
+      className={`rounded-[1rem] border transition-all duration-300 overflow-hidden w-[49%]`}
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -64,7 +64,7 @@ export default function CustomAccordion({ index }) {
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out${isOpen
+        className={`transition-all pt-[2rem] ${isOpen
           ? "opacity-100 bg-[rgba(240,240,240,0.15)] px-[5rem] pb-[2rem]"
           : "h-0 opacity-0 hidden"
           }`}
