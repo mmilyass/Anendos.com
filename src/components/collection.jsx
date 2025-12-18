@@ -22,11 +22,11 @@ export default function Collection() {
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center gap-24 w-full">
+    <section className="flex flex-col justify-center items-center gap-44 w-full">
       {perfums.map((category, catIndex) => (
-        <div key={catIndex} className="flex flex-col gap-12 w-full">
+        <div key={catIndex} className="flex flex-col w-full">
           {/* Section Title */}
-          <h2 className="text-white w-full text-center text-2xl">
+          <h2 className="text-white text-5xl">
             {categories[catIndex]}
           </h2>
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer({
   logo,
   email,
@@ -23,9 +25,9 @@ export default function Footer({
           <div className="flex flex-col gap-4">
             <h3 className="text-[1rem] uppercase text-(--main-gold)">Useful Links</h3>
             <div>
-              <a href="#faq" className="hover:underline text-[white] no-underline"><p>FAQ</p></a>
-              <a href="#about" className="hover:underline text-[white] no-underline"><p>About</p></a>
-              <a href="#home" className="hover:underline text-[white] no-underline"><p>Home</p></a>
+              <Link to="/" className="hover:underline text-[white] no-underline"><p>FAQ</p></Link>
+              <Link to="/" className="hover:underline text-[white] no-underline"><p>About</p></Link>
+              <Link to="/" className="hover:underline text-[white] no-underline"><p>Home</p></Link>
             </div>
           </div>
 

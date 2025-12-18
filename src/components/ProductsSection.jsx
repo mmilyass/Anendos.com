@@ -21,7 +21,7 @@ export default function ProductsSection() {
           className="custom-scroll-text"
         />
       </div> */}
-      <div className="text-(--main-gold) text-5xl text-center">TOP PRODUCTS</div>
+      <div className="text-(--main-gold) text-8xl text-center">TOP PRODUCTS</div>
       <div className="flex justify-center w-full z-10">
         <div className="flex flex-wrap justify-between w-full">
           {types.map((moveItem, index) => {

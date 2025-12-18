@@ -19,6 +19,10 @@ body {
   margin: 0;
 }
 
+.custom-rays{
+  position: absolute;
+}
+
 /* Small screens (≥640px) */
 @media (min-width: 640px) {
   .topSales {

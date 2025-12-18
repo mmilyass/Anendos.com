@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"; 
+import { useState, useEffect } from "react";
 import "../index.css"; // add: global font import
 
 export default function NavComponent() {
@@ -6,7 +6,7 @@ export default function NavComponent() {
 
   useEffect(() => {
     const handleScroll = () => {
-        setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -15,8 +15,7 @@ export default function NavComponent() {
   }, []);
 
   return (
-    <nav className={`flex items-center justify-between h-[4rem] w-full z-50  
-        ${isScrolled ? "bg-[black] shadow-[0_0_10px_rgba(255,215,0,0.2)] transition-all duration-500" : "bg-transparent transition-all duration-500"}`}>
+    <nav className={`flex items-center justify-between h-[4rem] w-full z-50 `}>
       <img src="../../public/assets/logo.png" alt="aeternum logo" className="w-40" />
       <ul className="flex gap-12 list-none">
         <a

@@ -13,16 +13,19 @@
       {
         "name": "something",
         "price": 99,
+        "OldPrice": 200,
         "image": "public/assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
+        "OldPrice": 200,
         "image": "public/assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
+        "OldPrice": 200,
         "image": "public/assets/bottle.png"
       }
     ],
@@ -55,16 +58,19 @@
       {
         "name": "something else",
         "price": 109,
+        "OldPrice": 200,
         "image": "public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
+        "OldPrice": 200,
         "image": "public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
+        "OldPrice": 200,
         "image": "public/assets/bottle.png"
       }
     ],
@@ -93,11 +99,26 @@
     "image": "public/assets/bottle.png",
     "description": "A bold and powerful fragrance for confident men.",
     "detailImage": "../../public/assets/detailImage.webp",
-    "SeeMore": {
-      "name": "special edition",
-      "price": 199,
-      "image": "public/assets/bottle.png"
-    },
+    "SeeMore": [
+      {
+        "name": "something else",
+        "price": 109,
+        "OldPrice": 200,
+        "image": "public/assets/bottle.png"
+      },
+      {
+        "name": "something else",
+        "price": 109,
+        "OldPrice": 200,
+        "image": "public/assets/bottle.png"
+      },
+      {
+        "name": "something else",
+        "price": 109,
+        "OldPrice": 200,
+        "image": "public/assets/bottle.png"
+      }
+    ],
     "extraInfo": [
       {
         "title": "Functions",
@@ -123,11 +144,26 @@
     "image": "public/assets/bottle.png",
     "description": "A timeless and elegant fragrance.",
     "detailImage": "../../public/assets/detailImage.webp",
-    "SeeMore": {
-      "name": "limited edition",
-      "price": 199,
-      "image": "public/assets/bottle.png"
-    },
+    "SeeMore": [
+      {
+        "name": "something else",
+        "price": 109,
+        "OldPrice": 200,
+        "image": "public/assets/bottle.png"
+      },
+      {
+        "name": "something else",
+        "price": 109,
+        "OldPrice": 200,
+        "image": "public/assets/bottle.png"
+      },
+      {
+        "name": "something else",
+        "price": 109,
+        "OldPrice": 200,
+        "image": "public/assets/bottle.png"
+      }
+    ],
     "extraInfo": [
       {
         "title": "Functions",

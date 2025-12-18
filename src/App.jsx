@@ -25,7 +25,7 @@ function App() {
           path="/"
           element={
             <div className="flex flex-col gap-48">
-              <div className="flex flex-col items-center justify-center bg-black gap-48 mx-46">
+              <div className="flex flex-col items-center justify-center bg-black gap-80 mx-46">
                 <TopHeader />
                 <ProductsSection />
                 <Collection />
@@ -35,8 +35,8 @@ function App() {
                 logo="../../public/assets/logo.png"
                 email="anendos@gmail.com"
                 mobile="0604505235"
-                instagramIcon="src/assets/facebookIcon.png"
-                facebookIcon="src/assets/instagramIcon.png"
+                instagramIcon="../assets/facebookIcon.png"
+                facebookIcon="../assets/instagramIcon.png"
               />
             </div>
           }
