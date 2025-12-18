@@ -26,7 +26,7 @@ export default function Footer({
             <h3 className="text-[1rem] uppercase text-(--main-gold)">Useful Links</h3>
             <div>
               <Link to="/" className="hover:underline text-[white] no-underline"><p>FAQ</p></Link>
-              <Link to="/" className="hover:underline text-[white] no-underline"><p>About</p></Link>
+              <Link to="About" className="hover:underline text-[white] no-underline"><p>About</p></Link>
               <Link to="/" className="hover:underline text-[white] no-underline"><p>Home</p></Link>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import ProductCard from "./ProductCard";
-// import ScrollVelocity from "./ScrollVelocity";
 import "../index.css"; // global styles
 import { Link } from "react-router-dom";
 
@@ -14,13 +13,6 @@ export default function ProductsSection() {
       id="topsold"
       className="relative w-full flex flex-col gap-16"
     >
-      {/* <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 z-0">
-        <ScrollVelocity
-          texts={["TOP SOLD TOP SOLD", "TOP SOLD TOP SOLD"]}
-          velocity={100}
-          className="custom-scroll-text"
-        />
-      </div> */}
       <div className="text-(--main-gold) text-8xl text-center">TOP PRODUCTS</div>
       <div className="flex justify-center w-full z-10">
         <div className="flex flex-wrap justify-between w-full">

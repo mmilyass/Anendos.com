@@ -1,15 +1,14 @@
 import "./index.css"; // add: global CSS (Tailwind + fonts)
-import React from "react";
+import { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TopHeader from "./components/TopHeader.jsx";
 import ProductsSection from "./components/ProductsSection.jsx";
 import Answers from "./components/answers.jsx";
 import AOS from "aos";
 import Footer from "./components/footer.jsx";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
 import Collection from "./components/collection.jsx";
 import ProductDetail from "./components/ProductDetail.jsx"; // Example new page
+import About from "./components/About.jsx";
 
 function App() {
   useEffect(() => {
@@ -41,6 +40,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/About" element={<About />}></Route>
         <Route path="/ProductDetail" element={<ProductDetail />} />
       </Routes>
     </Router>
