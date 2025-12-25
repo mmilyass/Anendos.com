@@ -14,7 +14,7 @@ export default function NavComponent() {
     <nav className="w-full relative">
       <div className="flex flex-col w-full">
         {/* Mobile Header */}
-        <div className="w-full h-16 flex justify-between items-center lg:hidden  px-5 md:px-15 xl:px-20 ">
+        <div className="w-full h-16 flex justify-between items-center lg:hidden px-5 md:px-15 lg:px-20">
           <Link to="/">
             <img src="/assets/logo.png" alt="aeternum logo" className="w-40" />
           </Link>
@@ -43,7 +43,9 @@ export default function NavComponent() {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-              > px-5 md:px-15 xl:px-20 
+              >
+                {" "}
+                px-5 md:px-15 xl:px-20
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -68,7 +70,7 @@ export default function NavComponent() {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="items-center justify-between lg:h-16 lg:w-full bg-amber-50 lg:flex hidden h-0">
+      <div className="items-center justify-between lg:h-16 lg:w-full bg-amber-50 lg:flex hidden h-0  px-5 md:px-15 lg:px-20 ">
         <Link to="/">
           <img src="/assets/logo.png" alt="aeternum logo" className="w-40" />
         </Link>
