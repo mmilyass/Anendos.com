@@ -6,27 +6,27 @@
     "price": 199,
     "oldPrice": 399,
     "size": "50ml",
-    "image": "../../public/assets/bottle.png",
+    "image": "../../assets/bottle.png",
     "description": "Experience the epitome of luxury with Clive Christian, a fragrance that captivates the senses with its rich and opulent blend. Perfect for those who appreciate the finer things in life.",
-    "detailImage": "../../public/assets/Absolu-ingredient.webp",
+    "detailImage": "../../assets/Absolu-ingredient.webp",
     "relatedProducts": [
       {
         "name": "something",
         "price": 99,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       }
     ],
     "extraInfo": [
@@ -51,27 +51,27 @@
     "price": 199,
     "oldPrice": 399,
     "size": "50ml",
-    "image": "../../public/assets/bottle.png",
+    "image": "../../assets/bottle.png",
     "description": "A dark and mysterious fragrance with an air of elegance.",
-    "detailImage": "../../public/assets/Absolu-ingredient.webp",
+    "detailImage": "../../assets/Absolu-ingredient.webp",
     "SeeMore": [
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       }
     ],
     "extraInfo": [
@@ -96,27 +96,27 @@
     "price": 299,
     "oldPrice": 499,
     "size": "100ml",
-    "image": "../../public/assets/bottle.png",
+    "image": "../../assets/bottle.png",
     "description": "A bold and powerful fragrance for confident men.",
-    "detailImage": "../../public/assets/Absolu-ingredient.webp",
+    "detailImage": "../../assets/Absolu-ingredient.webp",
     "SeeMore": [
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       }
     ],
     "extraInfo": [
@@ -141,27 +141,27 @@
     "price": 279,
     "oldPrice": 450,
     "size": "100ml",
-    "image": "../../public/assets/bottle.png",
+    "image": "../../assets/bottle.png",
     "description": "A timeless and elegant fragrance.",
-    "detailImage": "../../public/assets/Absolu-ingredient.webp",
+    "detailImage": "../../assets/Absolu-ingredient.webp",
     "SeeMore": [
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "../../public/assets/bottle.png"
+        "image": "../../assets/bottle.png"
       }
     ],
     "extraInfo": [

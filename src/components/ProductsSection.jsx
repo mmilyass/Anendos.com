@@ -30,7 +30,7 @@ export default function ProductsSection() {
           {types.map((moveItem, index) => (
             <Link to={`/ProductDetail/${moveItem}`} className="no-underline">
               <ProductCard
-                image="../../public/assets/bottle.png"
+                image="../../assets/bottle.png"
                 name={names[index]}
                 price={99}
                 oldPrice={199}

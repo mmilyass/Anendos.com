@@ -171,7 +171,7 @@ export default function ProductDetail() {
                 className="no-underline"
               >
                 <ProductCard
-                  image="../../public/assets/bottle.png"
+                  image="../../assets/bottle.png"
                   name={moveItem}
                   price={99}
                   oldPrice={199}
@@ -183,11 +183,11 @@ export default function ProductDetail() {
         </div>
       </div>
       <Footer
-        logo="../../public/assets/logo.png"
+        logo="../../assets/logo.png"
         email="anendos@gmail.com"
         mobile="0604505235"
-        instagramIcon="../../public/assets/facebookIcon.png"
-        facebookIcon="../../public/assets/instagramIcon.png"
+        instagramIcon="../../assets/facebookIcon.png"
+        facebookIcon="../../assets/instagramIcon.png"
       />
     </div>
   );

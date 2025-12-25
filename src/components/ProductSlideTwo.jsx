@@ -73,7 +73,7 @@ export default function ProductSlideTwo({ names, types, size, slide }) {
               className="no-underline min-w-1/2"
             >
               <ProductCard
-                image="../../public/assets/bottle.png"
+                image="../../assets/bottle.png"
                 name={names[index]}
                 price={99}
                 oldPrice={199}

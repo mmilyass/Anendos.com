@@ -93,7 +93,7 @@ export default function Faq() {
       </div>
       <div>
         <Footer
-          logo="../../public/assets/logo.png"
+          logo="../../assets/logo.png"
           email="anendos@gmail.com"
           mobile="0604505235"
           instagramIcon="../assets/facebookIcon.png"
