@@ -1,43 +1,61 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Plus, Minus } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import perfumes from "../data/topsales.json";
 import "../index.css";
 import Footer from "./footer";
+import ProductCard from "./ProductCard";
+import { useParams } from "react-router-dom";
+import ProductSlideOne from "./ProductSlideOne";
+import ProductSlideTwo from "./ProductSlideTwo";
 
 export default function ProductDetail() {
+  const [scrol, setScrol] = useState(true);
   const navigate = useNavigate();
-  const { state } = useLocation();
+  const { name: paramName } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [expandedSection, setExpandedSection] = useState(null);
-  if (!state) {
-    return <div className="text-white w-30 h-30">No perfum information available.</div>;
+  const names = ["La Coste Blanc", "La Coste Noir", "Creed Aventus"];
+  const types = ["lacoste_blanc", "lacoste_noir", "creed_aventus"];
+  console.log(scrol);
+  useEffect(() => {
+    if (scrol) {
+      window.scrollTo(0, 0);
+      setScrol(false); // run only once
+    }
+  }, [scrol]);
+  const perfum = perfumes[paramName];
+
+  if (!perfum) {
+    return <div className="text-black">No perfume information available.</div>;
   }
-  const perfum = perfumes[state.name];
-  console.log(perfum);
+
   const toggleSection = (index) => {
     setExpandedSection(expandedSection === index ? null : index);
   };
 
   return (
-    <div className="bg-black flex flex-col gap-25">
+    <div className="bg-white flex flex-col gap-25">
       {/* Header */}
       <div className="">
         <div className="mx-auto px-6 lg:px-32 py-6">
-          <button onClick={() => navigate(-1)} className="flex items-center gap-2 text-lg text-gray-600 hover:text-white transition">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 text-lg text-gray-600 hover:text-(--main-gold) transition"
+          >
             <ArrowLeft size={23} />
             Back
           </button>
         </div>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 px-6 lg:px-32 ">
         {/* Main Product Section */}
-        <div className="mx-auto px-6 lg:px-32">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full">
             {/* Left: Product Image */}
-            <div className="border-[rgba(255,255,0,0.2)] border flex items-center justify-center py-20">
+            <div className="border flex items-center justify-center py-20 bg-(--main-green)">
               <img
                 src={perfum.image}
                 alt={perfum.name}
@@ -48,13 +66,17 @@ export default function ProductDetail() {
             {/* Right: Product Info */}
             <div className="space-y-8">
               <div>
-                <h1 className="text-4xl font-light text-(--main-gold) mb-1">{perfum.name}</h1>
-                <p className="text-sm text-white">{perfum.subtitle}</p>
+                <h1 className="text-4xl font-light text-(--main-gold) mb-1 w-full">
+                  {perfum.name}
+                </h1>
+                <p className="text-sm text-black">{perfum.subtitle}</p>
               </div>
 
-              <div className="text-3xl font-light text-white">{perfum.price}MAD</div>
+              <div className="text-3xl font-light text-black">
+                {perfum.price}MAD
+              </div>
 
-              <p className="text-sm text-white leading-relaxed">
+              <p className="text-sm text-black leading-relaxed">
                 {perfum.description}
               </p>
 
@@ -65,14 +87,16 @@ export default function ProductDetail() {
                   <div className="flex items-center border border-gray-300">
                     <button
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="px-4 py-2 hover:text-(--main-gold) transition text-white"
+                      className="px-4 py-2 hover:text-(--main-gold) transition text-black"
                     >
                       <Minus size={14} />
                     </button>
-                    <span className="px-6 py-2 text-sm border-x border-gray-300 text-(--main-gold)">{quantity}</span>
+                    <span className="px-6 py-2 text-sm border-x border-gray-300 text-(--main-gold)">
+                      {quantity}
+                    </span>
                     <button
                       onClick={() => setQuantity(quantity + 1)}
-                      className="px-4 py-2 hover:text-(--main-gold) transition text-white"
+                      className="px-4 py-2 hover:text-(--main-gold) transition text-black"
                     >
                       <Plus size={14} />
                     </button>
@@ -80,10 +104,10 @@ export default function ProductDetail() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <button className="bg-white text-black py-4 text-sm font-light tracking-wide hover:bg-gray-800 hover:text-(--main-gold) transition">
+                  <button className=" text-(--main-gold) py-4 text-sm font-light tracking-wide bg-(--main-green) hover:text-black transition">
                     ADD TO CART
                   </button>
-                  <button className="bg-white text-black py-4 text-sm font-light tracking-wide hover:bg-gray-800 hover:text-(--main-gold) transition">
+                  <button className="text-(--main-gold)  py-4 text-sm font-light tracking-wide bg-(--main-green) hover:text-black transition">
                     ADD TO WISHLIST
                   </button>
                 </div>
@@ -97,13 +121,14 @@ export default function ProductDetail() {
                       onClick={() => toggleSection(index)}
                       className="w-full flex items-center justify-between py-5 text-left transition"
                     >
-                      <span className="text-sm font-light text-white tracking-wide uppercase">
+                      <span className="text-sm font-light text-black tracking-wide uppercase">
                         {section.title}
                       </span>
                       <Plus
                         size={16}
-                        className={`text-(--main-gold) transition-transform ${expandedSection === index ? "rotate-45" : ""
-                          }`}
+                        className={`text-(--main-gold) transition-transform ${
+                          expandedSection === index ? "rotate-45" : ""
+                        }`}
                       />
                     </button>
                     {expandedSection === index && (
@@ -119,36 +144,40 @@ export default function ProductDetail() {
         </div>
 
         {/* Full Width Detail Image */}
-        <div className="w-full px-6 lg:px-32 bg-black">
+        <div className="w-full flex justify-center items-center bg-(--main-green)">
           <img
             src={perfum.detailImage}
             alt="Product detail"
-            className="w-full h-150 object-cover"
+            className="w-1/2 object-cover"
           />
         </div>
       </div>
       {/* Related Products */}
       <div className="bg-black-50 py-20">
         <div className="mx-auto px-6 lg:px-32">
-          <h2 className="text-2xl font-light text-(--main-gold) mb-12 text-center">See also</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {perfum.relatedProducts.map((item, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="border border-[rgba(255,255,0,0.2)] mb-4 flex justify-center items-center h-100">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="h-80 hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="flex items-start justify-between">
-                  <h3 className="text-sm font-light text-white">{item.name}</h3>
-                  <div>
-                    <span className="text-sm font-light text-white line-through opacity-80 mr-3">${item.OldPrice}</span>
-                    <span className="text-sm font-light text-(--main-gold)">${item.price}</span>
-                  </div>
-                </div>
-              </div>
+          <h2 className="text-2xl font-light text-(--main-gold) mb-12 text-center">
+            See also
+          </h2>
+          <div className="block md:hidden">
+            <ProductSlideOne names={names} types={types} size={100} slide={3} />
+          </div>
+          <div className="md:block hidden lg:hidden">
+            <ProductSlideTwo names={names} types={types} size={100} slide={2} />
+          </div>
+          <div className="lg:grid-cols-3 gap-8 hidden xl:grid">
+            {names.map((moveItem, index) => (
+              <Link
+                to={`/ProductDetail/${types[index]}`}
+                className="no-underline"
+              >
+                <ProductCard
+                  image="../../public/assets/bottle.png"
+                  name={moveItem}
+                  price={99}
+                  oldPrice={199}
+                  size="large"
+                />
+              </Link>
             ))}
           </div>
         </div>

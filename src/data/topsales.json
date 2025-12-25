@@ -6,41 +6,41 @@
     "price": 199,
     "oldPrice": 399,
     "size": "50ml",
-    "image": "public/assets/bottle.png",
+    "image": "../../public/assets/bottle.png",
     "description": "Experience the epitome of luxury with Clive Christian, a fragrance that captivates the senses with its rich and opulent blend. Perfect for those who appreciate the finer things in life.",
-    "detailImage": "../../public/assets/detailImage.webp",
+    "detailImage": "../../public/assets/Absolu-ingredient.webp",
     "relatedProducts": [
       {
         "name": "something",
         "price": 99,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something",
         "price": 99,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       }
     ],
     "extraInfo": [
       {
-        "title": "Functions",
-        "content": "Gelium sodales a enim id sit amet lorem nec urna augue. Ut posuere, felis sed eu ullamcorper pellentesque magna mauris, pulvinar turpis at enim. Donec in mi lorem facilisis. Morbi nec eget dignissim porttitor mauris."
+        "title": "Fragrance Experience",
+        "content": "Anendos perfumes are crafted to embody charisma, confidence, and elegance. Each scent enhances your personal presence and leaves a lasting impression."
       },
       {
-        "title": "Usage",
-        "content": "Apply to wet skin, massage gently to create a rich lather, then rinse thoroughly. For best results, use daily."
+        "title": "How to Use",
+        "content": "Spritz lightly on pulse points—wrists, neck, and behind ears. Let your signature scent reveal your sophistication and confidence throughout the day."
       },
       {
         "title": "Shipping & Delivery",
-        "content": "Standard shipping takes 3-5 business days. Express shipping available at checkout. Free shipping on orders over 500 MAD."
+        "content": "Enjoy same-day delivery within Casablanca. Orders outside Casablanca are delivered within 1-2 business days. Free shipping on orders over 500 MAD."
       }
     ]
   },
@@ -51,41 +51,41 @@
     "price": 199,
     "oldPrice": 399,
     "size": "50ml",
-    "image": "public/assets/bottle.png",
+    "image": "../../public/assets/bottle.png",
     "description": "A dark and mysterious fragrance with an air of elegance.",
-    "detailImage": "../../public/assets/detailImage.webp",
+    "detailImage": "../../public/assets/Absolu-ingredient.webp",
     "SeeMore": [
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       }
     ],
     "extraInfo": [
       {
-        "title": "Functions",
-        "content": "Dark fragrance functions description..."
+        "title": "Fragrance Experience",
+        "content": "Anendos perfumes are crafted to embody charisma, confidence, and elegance. Each scent enhances your personal presence and leaves a lasting impression."
       },
       {
-        "title": "Usage",
-        "content": "Apply lightly on pulse points."
+        "title": "How to Use",
+        "content": "Spritz lightly on pulse points—wrists, neck, and behind ears. Let your signature scent reveal your sophistication and confidence throughout the day."
       },
       {
         "title": "Shipping & Delivery",
-        "content": "Ships in 3-5 business days."
+        "content": "Enjoy same-day delivery within Casablanca. Orders outside Casablanca are delivered within 1-2 business days. Free shipping on orders over 500 MAD."
       }
     ]
   },
@@ -96,27 +96,27 @@
     "price": 299,
     "oldPrice": 499,
     "size": "100ml",
-    "image": "public/assets/bottle.png",
+    "image": "../../public/assets/bottle.png",
     "description": "A bold and powerful fragrance for confident men.",
-    "detailImage": "../../public/assets/detailImage.webp",
+    "detailImage": "../../public/assets/Absolu-ingredient.webp",
     "SeeMore": [
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       }
     ],
     "extraInfo": [
@@ -141,41 +141,41 @@
     "price": 279,
     "oldPrice": 450,
     "size": "100ml",
-    "image": "public/assets/bottle.png",
+    "image": "../../public/assets/bottle.png",
     "description": "A timeless and elegant fragrance.",
-    "detailImage": "../../public/assets/detailImage.webp",
+    "detailImage": "../../public/assets/Absolu-ingredient.webp",
     "SeeMore": [
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       },
       {
         "name": "something else",
         "price": 109,
         "OldPrice": 200,
-        "image": "public/assets/bottle.png"
+        "image": "../../public/assets/bottle.png"
       }
     ],
     "extraInfo": [
       {
-        "title": "Functions",
-        "content": "Elegant fragrance functions description..."
+        "title": "Fragrance Experience",
+        "content": "Anendos perfumes are crafted to embody charisma, confidence, and elegance. Each scent enhances your personal presence and leaves a lasting impression."
       },
       {
-        "title": "Usage",
-        "content": "Apply on neck and wrists for best effect."
+        "title": "How to Use",
+        "content": "Spritz lightly on pulse points—wrists, neck, and behind ears. Let your signature scent reveal your sophistication and confidence throughout the day."
       },
       {
         "title": "Shipping & Delivery",
-        "content": "Standard shipping 3-5 days."
+        "content": "Enjoy same-day delivery within Casablanca. Orders outside Casablanca are delivered within 1-2 business days. Free shipping on orders over 500 MAD."
       }
     ]
   }
