@@ -15,7 +15,7 @@ export default function Footer({
   return (
     <div className="w-full">
       <div className="bg-[black] h-[0.1px]"></div>
-      <footer className="h-[15rem] w-full text-[black] flex pt-16 justify-around items-start">
+      <footer className="gap-10 lg:h-60 h-110 w-full text-[black] flex flex-col py-16 lg:justify-between items-start lg:flex-row px-5 md:px-15 lg:px-20">
         <div className="flex items-start">
           <Link to="/">
             <img src={logo} alt="Logo" className="w-40" />
@@ -23,7 +23,7 @@ export default function Footer({
         </div>
 
         {/* MIDDLE SECTIONS */}
-        <div className="flex flex-wrap gap-32">
+        <div className="flex flex-col lg:flex-row gap-10">
           <div className="flex flex-col gap-4">
             <h3 className="text-[1rem] uppercase text-(--main-gold)">
               Useful Links
