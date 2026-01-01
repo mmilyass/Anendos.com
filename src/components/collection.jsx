@@ -3,6 +3,7 @@ import ProductCard from "./ProductCard";
 import "../index.css";
 import ProductSlideOne from "./ProductSlideOne";
 import ProductSlideTwo from "./ProductSlideTwo";
+import ProductSlideThree from "./ProductSlideThree";
 
 export default function Collection() {
   const categories = ["Luxury Scents", "Fresh Scents", "Warm Scents"];
@@ -23,15 +24,12 @@ export default function Collection() {
       {perfums.map((category, catIndex) => (
         <div key={catIndex} className="relative w-full flex flex-col gap-8">
           {/* Section Title */}
-          <h2 className="text-black text-3xl">
-            {categories[catIndex]}
-          </h2>
+          <h2 className="text-black text-3xl">{categories[catIndex]}</h2>
 
           {/* Products */}
           <div className="block md:hidden">
             <ProductSlideOne
-            
-            Clive
+              Clive
               names={perfums[catIndex]}
               types={types}
               size={100}
@@ -46,8 +44,14 @@ export default function Collection() {
               slide={3}
             />
           </div>
-          <div className="overflow-hidden w-full hidden lg:block">
-            <div className="grid w-full grid-cols-4 gap-8 " data-aos="fade-up">
+          <div className="overflow-hidden w-full hidden lg:block ">
+            <ProductSlideThree
+              names={perfums[catIndex]}
+              types={types}
+              size={100}
+              slide={2}
+            />
+            {/* <div className="grid w-full grid-cols-3 gap-8 " data-aos="fade-up">
               {category.map((productName, productIndex) => (
                 <Link
                   to={`/ProductDetail/${types[productIndex]}`}
@@ -62,7 +66,7 @@ export default function Collection() {
                   />
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       ))}

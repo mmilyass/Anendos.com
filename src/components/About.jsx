@@ -4,16 +4,16 @@ import Footer from "./footer";
 export default function About() {
   window.scrollTo(0, 0);
   return (
-    <div className="min-h-screen bg-[white] text-white overflow-x-hidden">
+    <div className="w-full bg-linear-to-b from-white to-[#ffffff] text-white overflow-x-hidden">
       {/* Hero Section */}
-      <div className="px-46">
+      <div>
         <NavComponent />
       </div>
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-radial from-zinc-900 via-[white] to-[white]"></div>
 
         <div className="relative z-10 text-center animate-fade-in">
-          <h1 className="text-8xl md:text-[8rem] font-medium tracking-[0.3em] mb-6 bg-linear-to-r from-yellow-600 to-(--main-gold) via-yellow-500 bg-clip-text text-transparent uppercase">
+          <h1 className="text-5xl md:text-8xl font-medium tracking-[0.3em] mb-6 bg-linear-to-r from-yellow-600 to-(--main-gold) via-yellow-500 bg-clip-text text-transparent uppercase">
             ANENDOS
           </h1>
           <p className="text-2xl md:text-3xl text-black">

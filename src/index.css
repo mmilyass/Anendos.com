@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Lora:ital,wght@0,400..700;1,400..700&family=Marcellus+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* @tailwind base;
 @tailwind components;
@@ -15,15 +16,8 @@
   font-family: 'Cinzel', serif;
 }
 
-.lora{
-  font-family: 'Lora', sans-serif;
-}
-.bebas{
-  font-family: "Bebas Neue", sans-serif;
-}
-
 body {
-  font-family: 'Cinzel', serif;
+  font-family: "Cinzel", serif;
   /* font-weight: bold; */
   margin: 0;
 }

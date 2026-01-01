@@ -7,13 +7,12 @@ import Footer from "./footer";
 export default function Faq() {
   const [scrol, setScrol] = useState(true);
   const [open, setOpen] = useState(null);
-  useEffect(()=>{
-    if (scrol){
+  useEffect(() => {
+    if (scrol) {
       window.scrollTo(0, 0);
       setScrol(false);
     }
-
-  }, [scrol])
+  }, [scrol]);
   const faqQuestions = [
     {
       question: "What makes your perfumes special?",
@@ -36,7 +35,8 @@ export default function Faq() {
         "Absolutely. We provide tips and suggestions to help you pick your first scent or explore new ones, making it easy to find a signature fragrance that amplifies your confidence.",
     },
     {
-      question: "Can I trust the quality even though these are inspired by other brands?",
+      question:
+        "Can I trust the quality even though these are inspired by other brands?",
       answer:
         "Yes. We focus on **precision, quality, and consistency**. Each fragrance is crafted to deliver an experience that rivals high-end originals, so you can enjoy a confident, captivating scent every time.",
     },
@@ -46,27 +46,26 @@ export default function Faq() {
         "You can order easily through our online store, with fast and secure delivery. Experience the power of a great fragrance without compromise.",
     },
   ];
-  
+
   return (
-    <section id="faq" className="flex flex-col gap-40 w-full">
-      <div className="px-46">
+    <section id="faq" className="flex flex-col gap-40 w-full bg-linear-to-b from-white to-[#ffffff]">
+      <div className="">
         <NavComponent />
       </div>
 
       <div className=" flex flex-col w-full justify-center items-center gap-12  bg-white">
         <div className="flex flex-col w-full justify-center ">
-          <h2 className="text-black font-serif  text-5xl m-auto lg:w-1/2 w-ful">
-            Some of the things you <br />
-            may wanna know
+          <h2 className="text-black font-serif text-center text-5xl m-auto lg:w-1/2 w-ful">
+            You need to KNOW
           </h2>
         </div>
-        <div className="flex flex-col justify-center gap-4 w-full">
+        <div className="flex flex-col justify-center gap-4 w-full px-5 md:px-20 xl:px-25">
           {faqQuestions.map((item, index) => (
             <div className="flex flex-col">
               <div
-                className={`border-[black] border flex justify-between items-center rounded ${
-                  open === index ? "text-(--main-gold)" : "text-[black]"
-                } h-18 px-6 lg:w-1/2 w-full mx-auto  cursor-pointer`}
+                className={`border-[black] border flex justify-between items-center rounded-2xl  w-full ${
+                  open === index ? "text-(--main-gold) " : "text-[black]"
+                } px-6 py-6 mx-auto  cursor-pointer`}
                 onClick={() => {
                   setOpen(open === index ? null : index);
                 }}
@@ -81,7 +80,7 @@ export default function Faq() {
                 />
               </div>
               <div
-                className={`border-[#6f6f6f] border-b border-x lg:w-1/2 w-full mx-auto text-[#575757] px-6 py-6 lora  ${
+                className={`border-[#6f6f6f] border-b border-x w-full rounded-2xl mx-auto text-[#575757] px-6 py-6 lora  ${
                   open == index ? "flex" : "hidden"
                 }`}
               >

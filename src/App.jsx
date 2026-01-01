@@ -26,9 +26,9 @@ function App() {
           path="/"
           element={
             <div className="flex flex-col gap-48 w-full">
-              <div className=" flex flex-col items-center justify-center gap-55">
+              <div className=" flex flex-col items-center justify-center gap-10">
                 <TopHeader />
-                <div className="flex flex-col items-center justify-center gap-55 w-full">
+                <div className="flex flex-col items-center justify-center gap-20 w-full">
                   <ProductsSection />
                   <Collection />
                 </div>

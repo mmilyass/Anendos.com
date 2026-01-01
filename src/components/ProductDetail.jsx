@@ -36,10 +36,10 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="bg-white flex flex-col gap-25">
+    <div className=" bg-linear-to-b from-white to-[#ffffff] flex flex-col gap-25">
       {/* Header */}
       <div className="">
-        <div className="mx-auto px-6 lg:px-32 py-6">
+        <div className="px-2 md:px-4 xl:px-8 py-6">
           <button
             onClick={() => navigate(-1)}
             className="flex items-center gap-2 text-lg text-gray-600 hover:text-(--main-gold) transition"
@@ -50,7 +50,7 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-8 px-6 lg:px-32 ">
+      <div className="flex flex-col gap-8 px-5 md:px-6 xl:px-10">
         {/* Main Product Section */}
         <div className="">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full">
@@ -144,17 +144,17 @@ export default function ProductDetail() {
         </div>
 
         {/* Full Width Detail Image */}
-        <div className="w-full flex justify-center items-center bg-(--main-green)">
+        <div className="w-full flex justify-center items-center bg-(--main-green) h-140 overflow-hidden">
           <img
             src={perfum.detailImage}
             alt="Product detail"
-            className="w-1/2 object-cover"
+            className="object-cover"
           />
         </div>
       </div>
       {/* Related Products */}
       <div className="bg-black-50 py-20">
-        <div className="mx-auto px-6 lg:px-32">
+        <div className="px-2 md:px-4 xl:px-8">
           <h2 className="text-2xl font-light text-(--main-gold) mb-12 text-center">
             See also
           </h2>
@@ -164,21 +164,23 @@ export default function ProductDetail() {
           <div className="md:block hidden lg:hidden">
             <ProductSlideTwo names={names} types={types} size={100} slide={2} />
           </div>
-          <div className="lg:grid-cols-3 gap-8 hidden xl:grid">
-            {names.map((moveItem, index) => (
-              <Link
-                to={`/ProductDetail/${types[index]}`}
-                className="no-underline"
-              >
-                <ProductCard
-                  image="../../assets/bottle.png"
-                  name={moveItem}
-                  price={99}
-                  oldPrice={199}
-                  size="large"
-                />
-              </Link>
-            ))}
+          <div className="relative w-full overflow-hidden hidden lg:block">
+            <div className="grid w-full grid-cols-3 gap-2">
+              {types.map((moveItem, index) => (
+                <Link
+                  to={`/ProductDetail/${moveItem}`}
+                  className="no-underline"
+                >
+                  <ProductCard
+                    image="../../assets/bottle.png"
+                    name={names[index]}
+                    price={99}
+                    oldPrice={199}
+                    size="large"
+                  />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

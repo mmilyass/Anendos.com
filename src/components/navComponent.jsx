@@ -11,10 +11,10 @@ export default function NavComponent() {
   };
 
   return (
-    <nav className="w-full relative">
-      <div className="flex flex-col w-full">
+    <nav className="w-full relative  bg-yellow-0">
+      <div className="flex flex-col w-full ">
         {/* Mobile Header */}
-        <div className="w-full h-16 flex justify-between items-center lg:hidden px-5 md:px-15 lg:px-20">
+        <div className="w-full h-20 flex justify-between items-center lg:hidden px-2 md:px-4 xl:px-8">
           <Link to="/">
             <img src="/assets/logo.png" alt="aeternum logo" className="w-40" />
           </Link>
@@ -25,9 +25,9 @@ export default function NavComponent() {
           >
             {medium ? (
               <svg
-                className="w-8 h-8"
+                className="w-10 h-10"
                 fill="none"
-                stroke="currentColor"
+                stroke="black"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -39,9 +39,9 @@ export default function NavComponent() {
               </svg>
             ) : (
               <svg
-                className="w-8 h-8"
+                className="w-10 h-10"
                 fill="none"
-                stroke="currentColor"
+                stroke="black"
                 viewBox="0 0 24 24"
               >
                 {" "}
@@ -59,7 +59,7 @@ export default function NavComponent() {
 
         {/* Mobile Menu */}
         <div
-          className={`w-full text-black absolute z-50 transition-all duration-300 top-16 ${
+          className={`w-full text-black absolute z-50 transition-all duration-300 top-20 ${
             medium
               ? "opacity-100 pointer-events-auto translate-y-0"
               : "opacity-0 pointer-events-none -translate-y-4"
@@ -70,7 +70,7 @@ export default function NavComponent() {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="items-center justify-between lg:h-16 lg:w-full bg-amber-50 lg:flex hidden h-0  px-5 md:px-15 lg:px-20 ">
+      <div className="items-center justify-between lg:h-20 lg:w-full lg:flex hidden h-0    px-2 md:px-4 xl:px-8 ">
         <Link to="/">
           <img src="/assets/logo.png" alt="aeternum logo" className="w-40" />
         </Link>

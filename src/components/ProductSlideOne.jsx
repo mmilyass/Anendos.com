@@ -59,59 +59,11 @@ export default function ProductSlideOne({ names, types, size, slide }) {
   }
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex flex-col justify-center items-center">
       <div
         style={{ width: `${size}%` }}
         className="overflow-hidden relative group"
       >
-        {/* Dynamic Dots */}
-        <div className="transition-opacity duration-300 flex absolute -bottom-4 left-0 text-8xl leading-none">
-          {types.map((_, index) => (
-            <span
-              key={index}
-              className={`cursor-pointer transition-opacity duration-300 ${
-                moveIndex === index ? "opacity-100" : "opacity-50"
-              }`}
-              onClick={() => setindex(index)}
-            >
-              .
-            </span>
-          ))}
-        </div>
-
-        {/* Navigation Arrows */}
-        <div className="transition-opacity duration-300 flex gap-3 absolute bottom-0 right-0">
-          <button
-            className="z-10 cursor-pointer border border-black h-10 w-10 flex justify-center items-center opacity-70 hover:opacity-50 transition-opacity duration-300 active:opacity-100"
-            onClick={handlePrev}
-            aria-label="Previous slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="black"
-              className="w-7 h-7"
-            >
-              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-            </svg>
-          </button>
-          <button
-            className="z-10 cursor-pointer border border-black h-10 w-10 flex justify-center items-center opacity-70 hover:opacity-50 transition-opacity duration-300 active:opacity-100"
-            onClick={handleNext}
-            aria-label="Next slide"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="black"
-              className="w-7 h-7"
-            >
-              <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
-            </svg>
-          </button>
-        </div>
-
-        {/* Slides */}
         <div
           className="flex transition-transform duration-500 ease-out touch-pan-y"
           style={{ transform: `translateX(-${moveIndex * 100}%)` }}
@@ -136,6 +88,49 @@ export default function ProductSlideOne({ names, types, size, slide }) {
               />
             </Link>
           ))}
+        </div>
+      </div>
+      <div className="transition-opacity duration-300 flex text-8xl  absolute left-1/2 bottom-0 transform -translate-x-1/2 text-white">
+        <span className={`${moveIndex == 0 ? "opacity-100" : "opacity-50"}`}>
+          .
+        </span>
+        <span className={`${moveIndex == 1 ? "opacity-100" : "opacity-50"}`}>
+          .
+        </span>
+        <span
+          className={`${moveIndex == 2 ? "opacity-100" : "opacity-50"} ${
+            slide == 2 ? "hidden" : "flex"
+          }`}
+        >
+          .
+        </span>
+      </div>
+      <div className="transition-opacity duration-300  gap-3 absolute right-3 bottom-0 -translate-y-1/8 hidden lg:flex">
+        <div
+          className="z-10 cursor-pointer border border-black h-10 w-10 flex justify-center items-center opacity-70 hover:opacity-50 transition-opacity duration-300 active:opacity-100"
+          onClick={handlePrev}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            className="w-11 h-11"
+          >
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+          </svg>
+        </div>
+        <div
+          className="z-10 cursor-pointer border border-black h-10 w-10 flex justify-center items-center opacity-70 hover:opacity-50 transition-opacity duration-300 active:opacity-100"
+          onClick={handleNext}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            className="w-11 h-11"
+          >
+            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+          </svg>
         </div>
       </div>
     </div>

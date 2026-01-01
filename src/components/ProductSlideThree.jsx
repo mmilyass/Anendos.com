@@ -3,7 +3,7 @@ import "../index.css"; // global styles
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function ProductSlideTwo({ names, types, size, slide }) {
+export default function ProductSlideThree({ names, types, size, slide }) {
   // const names = ["La Coste Blanc", "La Coste Noir", "Creed Aventus"];
   // const types = ["lacoste_blanc", "lacoste_noir", "creed_aventus"];
 
@@ -22,13 +22,13 @@ export default function ProductSlideTwo({ names, types, size, slide }) {
         <div
           className="flex transition-transform duration-500 ease-out gap-1"
           style={{
-            transform: `translateX(-${moveIndex * 51}%)`,
+            transform: `translateX(-${moveIndex * 30}%)`,
           }}
         >
           {types.map((moveItem, index) => (
             <Link
               to={`/ProductDetail/${moveItem}`}
-              className="no-underline min-w-1/2"
+              className="no-underline min-w-[32%]"
             >
               <ProductCard
                 image="../../assets/bottle.png"
@@ -43,16 +43,21 @@ export default function ProductSlideTwo({ names, types, size, slide }) {
       </div>
       <div className="flex justify-between items-start w-full pt-2">
         <div className="transition-opacity duration-300 flex gap-1">
-          <div className={`w-5 h-2 rounded bg-gray-500 ${moveIndex == 0 ? "opacity-60" : "opacity-30"}`}>
-          </div>
-          <div className={`w-5 h-2 rounded bg-gray-500 ${moveIndex == 1 ? "opacity-60" : "opacity-30"}`}>
-          </div>
           <div
-            className={`w-5 h-2 rounded bg-gray-500 ${moveIndex == 2 ? "opacity-60" : "opacity-30"} ${
-              slide == 2 ? "hidden" : "flex"
-            }`}
-          >
-          </div>
+            className={`w-5 h-2 rounded  bg-gray-500 ${
+              moveIndex == 0 ? "opacity-60" : "opacity-30"
+            } `}
+          ></div>
+          <div
+            className={`w-5 h-2 rounded  bg-gray-500 ${
+              moveIndex == 1 ? "opacity-60" : "opacity-30"
+            } `}
+          ></div>
+          <div
+            className={`w-5 h-2 rounded  bg-gray-500 ${
+              moveIndex == 2 ? "opacity-60" : "opacity-30"
+            }  ${slide == 2 ? "hidden" : "flex"}`}
+          ></div>
         </div>
         <div className="transition-opacity duration-300 flex gap-3">
           <div

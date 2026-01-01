@@ -4,7 +4,7 @@ import NavComponent from "./navComponent";
 export default function TopHeader() {
   return (
     <header
-      className="w-full flex flex-col items-center relative"
+      className="w-full flex flex-col items-center relative h-screen"
     >
       <NavComponent />
       <HomePage />
